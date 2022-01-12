@@ -95,8 +95,8 @@ class gps:
                     self.cursor.execute(retrive)
                     rows = self.cursor.fetchall()
                     level = rows[0][1]
-                    self.current = rows[0][4]
-                    self.battery = rows[0][11]
+                    # self.current = rows[0][4]
+                    # self.battery = rows[0][11]
                     # self.cursor.execute("INSERT INTO record_data (lat, lng) VALUES (%s, %s)",(self.lat_in_degrees, self.lon_in_degrees))  # chạy lệnh update
                     # self.connection.commit()  
                     self.cursor.execute("INSERT INTO `data_map` (`lat`,`lng`, `level`) VALUES (%s, %s, %s)",(self.lat_in_degrees, self.lon_in_degrees, level))

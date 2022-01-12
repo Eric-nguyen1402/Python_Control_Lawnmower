@@ -35,6 +35,7 @@ while 1:
     cursor_update.execute(update_retrive)
     con_update.commit()
     # print("x = " + str(x), "y = " + str(y), "z = " + str(z), "distance " + str(distance))
+    
     retrive = "Select * from move_control;"
     # executing the quires
     cursor_update.execute(retrive)

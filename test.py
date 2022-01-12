@@ -19,10 +19,6 @@ try:
         for (_, angle, distance) in scan:
             scan_data[min([359, floor(angle)])] = distance
         if scan_data[0] != 0:
-            print(scan_data[0])
-            print(scan_data[3])
-            print(scan_data[357])
-            print(scan_data[355])
             if scan_data[0] < max_distance and scan_data[3] < max_distance and scan_data[357] < max_distance and scan_data[355] < max_distance:
                 print("front obstacle")
                 time.sleep(0.05)
